@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Chalk theme support</title>
+<meta name="description" content="Get help with the Chalk Shopify theme: what support covers, response times and the contact form.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/docs.css">
+</head>
+<body>
+<header class="top">
+  <a class="logo" href="../">chalk<i>.</i><small>Support</small></a>
+  <nav><a href="../">Docs</a><a href="../#changelog">Changelog</a><a class="dark" href="#form">Contact</a></nav>
+</header>
+
+<div class="wrap">
+  <aside class="side" aria-label="Contents">
+    <b>On this page</b>
+    <a href="#before">Before you write</a>
+    <a href="#covers">What support covers</a>
+    <a href="#form">Contact form</a>
+  </aside>
+
+  <main>
+    <section id="before">
+      <h1>Support</h1>
+      <p class="lead">We answer every message within two business days, Monday to Friday. Most questions are already covered in the <a href="../">documentation</a>.</p>
+      <div class="facts">
+        <div><b>2 days</b><span>Reply time, business days</span></div>
+        <div><b>English</b><span>Support language</span></div>
+        <div><b>Free</b><span>For every Chalk license</span></div>
+      </div>
+      <h2>Before you write</h2>
+      <ol class="steps">
+        <li>Check the <a href="../">documentation</a> and its <a href="../#faq">questions</a>.</li>
+        <li>Make sure you are on the latest version (see the <a href="../#changelog">changelog</a>). The version is in <b>Theme settings &gt; Theme information</b>.</li>
+        <li>Turn off apps one by one if the problem started after installing an app.</li>
+        <li>Have your store address, a link to the page and a screenshot ready.</li>
+      </ol>
+    </section>
+
+    <section id="covers">
+      <h2>What support covers</h2>
+      <table>
+        <thead><tr><th>Included</th><th>Not included</th></tr></thead>
+        <tbody>
+          <tr><td>How a setting, section or block works</td><td>Custom design or new features</td></tr>
+          <tr><td>Bugs in the theme code</td><td>Changes you or a developer made to the code</td></tr>
+          <tr><td>Help with the demo content and setup</td><td>Third-party apps and their settings</td></tr>
+          <tr><td>Updates to new theme versions</td><td>Shopify admin, payments and domain questions</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section id="form">
+      <h2>Contact form</h2>
+      <div class="card">
+        <form class="form" id="sf">
+          <div class="row2">
+            <label>Your name<input name="name" autocomplete="name" required></label>
+            <label>Your email<input name="email" type="email" autocomplete="email" required></label>
+          </div>
+          <div class="row2">
+            <label>Store address<input name="store" placeholder="your-store.myshopify.com" required></label>
+            <label>Topic<select name="topic">
+              <option>Setting up the theme</option>
+              <option>Something does not work</option>
+              <option>Updating the theme</option>
+              <option>Other</option>
+            </select></label>
+          </div>
+          <label>Message<textarea name="message" placeholder="What happened, on which page, and what you expected instead." required></textarea></label>
+          <div><button class="btn" type="submit">Send message <i aria-hidden="true">&rarr;</i></button></div>
+          <p class="mu" style="margin:0;font-size:14px;color:var(--mute)">The form opens your email app with the message filled in. You can also write to <a id="sm" href="#"></a> directly.</p>
+        </form>
+      </div>
+    </section>
+  </main>
+</div>
+
+<footer class="foot">Chalk theme by Promak Design. <a href="../">Documentation</a></footer>
+
+<script>
+  /* the support inbox, the only value to change */
+  const SUPPORT_EMAIL = 'promakdesign@gmail.com';
+  const sm = document.getElementById('sm'); sm.textContent = SUPPORT_EMAIL; sm.href = 'mailto:' + SUPPORT_EMAIL;
+  document.getElementById('sf').addEventListener('submit', (e) => {
+    e.preventDefault();
+    const f = new FormData(e.target);
+    const subject = 'Chalk support: ' + f.get('topic');
+    const body = ['Name: ' + f.get('name'), 'Email: ' + f.get('email'), 'Store: ' + f.get('store'), '', f.get('message')].join('\n');
+    location.href = 'mailto:' + SUPPORT_EMAIL + '?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
+  });
+</script>
+</body>
+</html>

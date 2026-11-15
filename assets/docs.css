@@ -1,0 +1,66 @@
+/* CHALK docs: white page, black type, one blue accent, the theme's Geist font */
+:root{--ink:#0E0E0E;--mute:rgba(14,14,14,.64);--line:rgba(14,14,14,.12);--soft:#F2F2F0;--accent:#050FFF;--g:24px}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:88px}
+body{margin:0;background:#fff;color:var(--ink);font:16px/1.6 'Geist',system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+.top{position:sticky;top:0;z-index:10;display:flex;align-items:center;justify-content:space-between;gap:16px;padding:14px var(--g);background:rgba(255,255,255,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.logo{font-weight:700;font-size:28px;letter-spacing:-.06em;text-decoration:none}.logo i{font-style:normal;color:var(--accent)}
+.logo small{font:600 12px/1 'Geist',sans-serif;letter-spacing:.02em;text-transform:uppercase;color:var(--mute);margin-left:10px}
+.top nav{display:flex;gap:6px;align-items:center}
+.top nav a{text-decoration:none;font:600 12px/1 'Geist',sans-serif;text-transform:uppercase;letter-spacing:.02em;padding:11px 14px;border-radius:10px}
+.top nav a:hover{background:var(--soft)}
+.top nav a.dark{background:var(--ink);color:#fff}
+.wrap{display:grid;grid-template-columns:240px minmax(0,760px);gap:64px;max-width:1140px;margin:0 auto;padding:48px var(--g) 120px}
+.side{position:sticky;top:88px;align-self:start;max-height:calc(100vh - 110px);overflow:auto}
+.side b{display:block;font:600 12px/1 'Geist',sans-serif;letter-spacing:.02em;text-transform:uppercase;color:var(--mute);margin:0 0 12px}
+.side a{display:block;text-decoration:none;padding:6px 10px;margin:0 -10px;border-radius:8px;font-size:15px}
+.side a:hover,.side a.on{background:var(--soft)}
+h1{font-size:clamp(44px,6vw,72px);line-height:.92;letter-spacing:-.05em;font-weight:600;text-transform:uppercase;margin:0 0 20px}
+.lead{font-size:19px;color:var(--mute);margin:0 0 40px;max-width:620px}
+section{padding:48px 0 8px;border-top:1px solid var(--line)}
+section:first-of-type{border-top:0;padding-top:0}
+h2{font-size:34px;line-height:1;letter-spacing:-.04em;font-weight:600;text-transform:uppercase;margin:0 0 20px}
+h3{font-size:20px;letter-spacing:-.02em;font-weight:600;margin:32px 0 8px}
+p,ul,ol{margin:0 0 16px}ul,ol{padding-left:1.2em}li{margin:0 0 6px}li::marker{color:var(--mute)}
+code{font:500 14px/1.4 ui-monospace,SFMono-Regular,Menlo,monospace;background:var(--soft);padding:2px 6px;border-radius:6px}
+.note{background:var(--soft);border-radius:16px;padding:18px 20px;margin:0 0 20px;font-size:15px}
+.note b{display:block;margin-bottom:4px}
+table{width:100%;border-collapse:collapse;margin:0 0 24px;font-size:15px}
+th,td{text-align:left;vertical-align:top;padding:12px 12px 12px 0;border-bottom:1px solid var(--line)}
+th{font:600 12px/1.2 'Geist',sans-serif;letter-spacing:.02em;text-transform:uppercase;color:var(--mute)}
+td:first-child{font-weight:600;white-space:nowrap}
+.steps{counter-reset:s;list-style:none;padding:0}
+.steps li{counter-increment:s;position:relative;padding-left:44px;margin-bottom:14px}
+.steps li::before{content:counter(s);position:absolute;left:0;top:0;width:30px;height:30px;border-radius:9px;background:var(--ink);color:#fff;font:600 13px/30px 'Geist',sans-serif;text-align:center}
+.ver{display:inline-block;font:600 12px/1 'Geist',sans-serif;letter-spacing:.02em;text-transform:uppercase;background:var(--accent);color:#fff;padding:6px 9px;border-radius:6px;margin-right:10px;vertical-align:2px}
+.foot{border-top:1px solid var(--line);padding:28px var(--g);text-align:center;color:var(--mute);font-size:14px}
+/* support page */
+.card{background:var(--soft);border-radius:24px;padding:clamp(24px,5vw,40px)}
+.form{display:grid;gap:14px}
+.form label{display:grid;gap:6px;font-size:14px;color:var(--mute)}
+.form input,.form select,.form textarea{width:100%;font:400 16px 'Geist',sans-serif;color:var(--ink);background:#fff;border:1px solid var(--line);border-radius:12px;padding:14px 16px}
+.form input,.form select{height:52px}
+.form textarea{min-height:160px;resize:vertical}
+.form input:focus,.form select:focus,.form textarea:focus{outline:2px solid var(--ink);outline-offset:1px}
+.row2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.btn{display:inline-flex;align-items:center;justify-content:space-between;gap:16px;height:52px;padding:0 8px 0 20px;border:0;border-radius:12px;background:var(--ink);color:#fff;font:600 12px 'Geist',sans-serif;letter-spacing:.02em;text-transform:uppercase;cursor:pointer;text-decoration:none}
+.btn i{display:grid;place-items:center;width:36px;height:36px;border-radius:9px;background:#fff;color:var(--ink);font-style:normal;font-size:16px}
+.btn:hover{background:var(--accent)}
+.facts{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:0 0 32px}
+.facts div{border:1px solid var(--line);border-radius:16px;padding:16px}
+.facts b{display:block;font-size:22px;letter-spacing:-.03em}
+.facts span{font-size:14px;color:var(--mute)}
+@media (max-width:900px){
+  .wrap{grid-template-columns:1fr;gap:24px;padding-top:28px}
+  .side{position:static;max-height:none;display:flex;flex-wrap:wrap;gap:6px}.side b{width:100%}
+  .side a{margin:0;background:var(--soft);font-size:14px}
+  td:first-child{white-space:normal}
+}
+@media (max-width:640px){
+  :root{--g:16px}
+  .top nav a:not(.dark){display:none}
+  .row2,.facts{grid-template-columns:1fr}
+  table,thead,tbody,tr,th,td{display:block}thead{display:none}
+  tr{border-bottom:1px solid var(--line);padding:10px 0}td{border:0;padding:2px 0}
+}

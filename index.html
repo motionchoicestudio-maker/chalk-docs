@@ -1,0 +1,272 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Chalk theme documentation</title>
+<meta name="description" content="How to set up and customize the Chalk Shopify theme: settings, sections, product pages, filters, cart, journal, gift cards and translations.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/docs.css">
+</head>
+<body>
+<header class="top">
+  <a class="logo" href="./">chalk<i>.</i><small>Docs</small></a>
+  <nav><a href="#start">Start</a><a href="#changelog">Changelog</a><a class="dark" href="support/">Support</a></nav>
+</header>
+
+<div class="wrap">
+  <aside class="side" aria-label="Contents">
+    <b>Contents</b>
+    <a href="#start">Getting started</a>
+    <a href="#settings">Theme settings</a>
+    <a href="#header">Header and menus</a>
+    <a href="#home">Home page sections</a>
+    <a href="#product">Product page</a>
+    <a href="#collection">Collections and search</a>
+    <a href="#cart">Cart</a>
+    <a href="#journal">Journal</a>
+    <a href="#pages">About, contact, FAQ</a>
+    <a href="#giftcard">Gift cards</a>
+    <a href="#markets">Languages and currencies</a>
+    <a href="#metafields">Metafields</a>
+    <a href="#images">Images</a>
+    <a href="#faq">Questions</a>
+    <a href="#changelog">Changelog</a>
+  </aside>
+
+  <main>
+    <section id="start">
+      <h1>Chalk theme</h1>
+      <p class="lead">A plain, fast Shopify theme for fitness stores that sell supplements, apparel and gear in one place. This guide walks through every setting and section.</p>
+      <div class="facts">
+        <div><b>1.0.0</b><span>Current version</span></div>
+        <div><b>OS 2.0</b><span>Sections on every page</span></div>
+        <div><b>0 apps</b><span>Needed to run the theme</span></div>
+      </div>
+      <h2>Getting started</h2>
+      <ol class="steps">
+        <li>In your Shopify admin open <b>Online Store &gt; Themes</b> and add Chalk from the Theme Store, or choose <b>Add theme &gt; Upload zip file</b> if you have the file.</li>
+        <li>Click <b>Customize</b>. The theme opens with the <b>Chalk</b> style and a ready home page.</li>
+        <li>Set your logo, colors and font in <b>Theme settings</b> (the brush icon in the editor's left bar).</li>
+        <li>Create the menus <code>main-menu</code> and <code>footer</code> in <b>Content &gt; Menus</b> if your store does not have them yet. The header, phone menu and footer read them by default.</li>
+        <li>Replace the demo photos and texts section by section, then preview on desktop and phone with the device switch at the top of the editor.</li>
+        <li>When you are happy, click <b>Publish</b>.</li>
+      </ol>
+      <div class="note"><b>Before you start</b>Duplicate the theme (<b>Actions &gt; Duplicate</b>) and keep the copy as a backup. Theme updates install as a new copy, so your published store never changes without you.</div>
+    </section>
+
+    <section id="settings">
+      <h2>Theme settings</h2>
+      <table>
+        <thead><tr><th>Group</th><th>What it controls</th></tr></thead>
+        <tbody>
+          <tr><td>Typography</td><td>One font for the whole store. Regular, medium, semibold, bold and italic are loaded automatically.</td></tr>
+          <tr><td>Colors</td><td><b>Background</b> and <b>Text</b> for every page. Secondary text uses the text color at lower opacity, so it always keeps readable contrast. <b>Panel background</b> fills the footer, menus and the cart. <b>Accent</b> and <b>Text on accent</b> style badges, sale prices, the logo dot and the Buy it now button.</td></tr>
+          <tr><td>Cart</td><td><b>Free shipping from</b>: an amount in your store currency. The cart shows a progress bar toward it. Set 0 to hide the bar.</td></tr>
+          <tr><td>Social media</td><td>Links for Instagram, TikTok, YouTube, Facebook, X, Pinterest, Threads, Snapchat, Tumblr, Vimeo and LinkedIn. Each filled field adds an icon to the footer. Leave a field empty to hide it.</td></tr>
+          <tr><td>Favicon</td><td>The small icon in the browser tab. Use a square image, 96 by 96 pixels or larger.</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section id="header">
+      <h2>Header and menus</h2>
+      <h3>Announcement</h3>
+      <p>A thin bar above the header with a <b>left text</b>, a <b>countdown</b> and a <b>right text</b>. Write the countdown end as <code>2026-12-31 23:59</code>. When the date passes, the countdown hides itself.</p>
+      <h3>Header</h3>
+      <ul>
+        <li><b>Logo</b>: an image. Without one, the store name is set in the theme font with an accent dot.</li>
+        <li><b>Menu</b>: the desktop menu, <code>main-menu</code> by default. A link that has child links opens the <b>Shop panel</b>.</li>
+        <li><b>Shop panel</b>: up to three link columns (<b>First column menu</b>, <b>Second column menu</b>, <b>Second column, lower menu</b>), a few products and a promo photo with a label, heading and link.</li>
+        <li><b>Search</b>: results appear while typing (products, pages, articles and suggestions).</li>
+        <li><b>Country and language</b>: the picker shows on its own once you sell to more than one country or publish more than one language.</li>
+      </ul>
+      <h3>Phone and tablet menu</h3>
+      <ul>
+        <li><b>Main links</b>: large links with the number of products in each collection. Defaults to <code>main-menu</code>.</li>
+        <li><b>Quick links</b>: small chips under the main links, good for Best sellers or Sale.</li>
+        <li><b>Other links</b>: plain links at the bottom, such as About or Contact. Defaults to <code>footer</code>.</li>
+      </ul>
+      <h3>Footer</h3>
+      <p>A tagline with a line under it, two menu columns, a social column (from <b>Theme settings &gt; Social media</b>), <b>Follow on Shop</b>, your store policies and the payment icons. The large wordmark at the bottom uses the store name.</p>
+    </section>
+
+    <section id="home">
+      <h2>Home page sections</h2>
+      <p>Add, hide and reorder sections from the left bar of the editor. Every section below can go on any page that uses sections.</p>
+      <table>
+        <thead><tr><th>Section</th><th>What it shows</th></tr></thead>
+        <tbody>
+          <tr><td>Hero</td><td>A large photo card with slides that change on progress strips, one heading and one button. Add a <b>Slide</b> block for each photo.</td></tr>
+          <tr><td>Manifesto</td><td>One short paragraph in large type.</td></tr>
+          <tr><td>Categories</td><td>Tall cards for your main collections, a second photo on hover and the product count. One <b>Category</b> block per card.</td></tr>
+          <tr><td>Product strip</td><td>A slowly running row of products with arrows. Pick products by hand or a collection, and set the speed (one loop, in seconds).</td></tr>
+          <tr><td>Featured drop</td><td>A tall photo with a heading and button next to four products.</td></tr>
+          <tr><td>Standard</td><td>A heading and photo cards with a big number, a short text and two chips that rise on hover.</td></tr>
+          <tr><td>New arrivals</td><td>A large photo that shrinks as you scroll while six products come in beside it.</td></tr>
+          <tr><td>Photo block</td><td>A wide photo with a heading and button. Add up to five <b>Frame</b> blocks and the photos change with a curtain wipe.</td></tr>
+          <tr><td>Reviews</td><td>A photo and a quote per <b>Review</b> block, with the reviewer and the product, and arrows to step through.</td></tr>
+          <tr><td>Journal</td><td>The latest three articles of a blog.</td></tr>
+          <tr><td>Newsletter</td><td>A signup form on a photo. Signups go to <b>Customers</b> with email marketing consent.</td></tr>
+          <tr><td>Statement</td><td>A label and one large sentence. Words in <i>italics</i> are shown in gray.</td></tr>
+          <tr><td>Featured product</td><td>One product with its photos and the buy column, so it can be bought without leaving the page.</td></tr>
+          <tr><td>Custom Liquid</td><td>Your own Liquid or HTML, for embeds and small additions.</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section id="product">
+      <h2>Product page</h2>
+      <p>Photos sit on the left, the buy column on the right. On a phone the photos come first. The buy column is built from blocks you can reorder or remove:</p>
+      <table>
+        <thead><tr><th>Block</th><th>What it does</th></tr></thead>
+        <tbody>
+          <tr><td>Range and type</td><td>A small line above the title: the range (from the <code>custom.range</code> metafield, or a product tag Fuel, Train or Lift) and the product type.</td></tr>
+          <tr><td>Title, Price</td><td>The title and the price with compare-at price, unit price, tax note and Shop Pay installments.</td></tr>
+          <tr><td>Lead line</td><td>One sentence under the price, from the block or the <code>custom.lead</code> metafield.</td></tr>
+          <tr><td>Short facts</td><td>Small chips from the <code>custom.chips</code> metafield.</td></tr>
+          <tr><td>Variant picker</td><td>Color swatches and option buttons. Picking a variant shows its own photo first.</td></tr>
+          <tr><td>Buy buttons</td><td>Quantity, Add to cart and Buy it now, subscription options when the product has selling plans, the gift card recipient form, and pickup availability.</td></tr>
+          <tr><td>Trust lines</td><td>Up to three short lines about shipping, returns and payment.</td></tr>
+          <tr><td>Collapsible row</td><td>A row that opens. Content comes from the product description, the <b>How to use</b> metafields or your own text.</td></tr>
+          <tr><td>Complementary products</td><td>Products that go well together, set in the Search &amp; Discovery app.</td></tr>
+          <tr><td>Apps, Custom Liquid</td><td>Blocks from installed apps (reviews, subscriptions) and your own code.</td></tr>
+        </tbody>
+      </table>
+      <h3>Photos by color</h3>
+      <p>Give each photo an <b>alt text</b> with the color name, exactly as in the Color option (for example <code>Black</code>). When a shopper picks that color, only its photos are shown. Photos without a color name show for every color. You can also attach one image to each variant in the product editor; the theme moves it to the front.</p>
+      <h3>Size guide</h3>
+      <p>Create a page with your size table, then pick it in <b>Product &gt; Size guide page</b> and list the product types that need it (for example <code>Apparel</code>). A Size guide link appears next to the Size option and opens the page in a dialog.</p>
+      <h3>Video and 3D</h3>
+      <p>Videos, YouTube or Vimeo links and 3D models added to a product appear in the gallery. 3D models get the View in your space button on phones that support it.</p>
+    </section>
+
+    <section id="collection">
+      <h2>Collections and search</h2>
+      <ul>
+        <li><b>Filters and sorting</b>: install the free <b>Shopify Search &amp; Discovery</b> app and choose filters there (availability, price, product type, options, metafields). The Filters button shows on collection and search pages.</li>
+        <li><b>Range chips</b>: a row of chips at the top of every collection. Pick a menu in <b>Catalog &gt; Range chips</b>. Its top links become the chips; child links become a second row.</li>
+        <li><b>Collection image and description</b>: shown under the title. Turn the image off with <b>Show collection image</b>.</li>
+        <li><b>Promo tile</b>: a photo card between products, on the collections you pick.</li>
+        <li><b>Products per page</b>: from 12 to 48.</li>
+      </ul>
+    </section>
+
+    <section id="cart">
+      <h2>Cart</h2>
+      <p>Add to cart opens the <b>cart drawer</b> on every page: lines with quantity, the free shipping bar and the subtotal. The <b>View cart</b> link opens the full cart page with the order note, discounts, taxes and express checkout buttons (Shop Pay, Apple Pay, Google Pay and other methods you turn on in <b>Settings &gt; Payments</b>).</p>
+      <p>Hide the order note in <b>Cart &gt; Show order note</b>.</p>
+    </section>
+
+    <section id="journal">
+      <h2>Journal</h2>
+      <p>The blog list shows cards with the photo, tag, reading time, title and a short excerpt (the article's excerpt, or the start of the text).</p>
+      <ul>
+        <li><b>Card photo</b>: article covers are wide, the cards are tall. Add a portrait image to the <code>custom.card_image</code> metafield and the card uses it, so people stay in the frame.</li>
+        <li><b>In short</b>: points at the top of an article, one per line, from <code>custom.in_short</code>.</li>
+        <li><b>Products in this article</b> from <code>custom.products</code> and <b>Sources</b> from <code>custom.sources</code> at the end of the article.</li>
+        <li><b>Comments</b>: turn them on per blog in <b>Content &gt; Blog posts &gt; Manage blogs</b>.</li>
+      </ul>
+    </section>
+
+    <section id="pages">
+      <h2>About, contact, FAQ</h2>
+      <ul>
+        <li><b>About chapters</b>: chapters with text on the left and a sticky photo on the right that follows the chapter you are reading.</li>
+        <li><b>Contact on a photo</b>: the Shopify contact form drawn in white lines over a photo. Messages arrive at your store email.</li>
+        <li><b>FAQ</b>: questions in tabs, with an aside block and a contact line at the bottom.</li>
+      </ul>
+      <p>To use them, create a page and pick the template <code>page.about</code>, <code>page.contact</code> or <code>page.faq</code> in the page editor.</p>
+    </section>
+
+    <section id="giftcard">
+      <h2>Gift cards</h2>
+      <p>Create a gift card product in <b>Products &gt; Gift cards</b>. On its product page, shoppers can send the card to someone else with a name, email, message and send date. The gift card page they receive shows the balance, the code with a copy button, a QR code for in-store use, Apple Wallet and a print button.</p>
+    </section>
+
+    <section id="markets">
+      <h2>Languages and currencies</h2>
+      <ul>
+        <li><b>Currencies</b>: add countries in <b>Settings &gt; Markets</b>. Prices switch to local currency once Shopify Payments is on.</li>
+        <li><b>Languages</b>: add and publish languages in <b>Settings &gt; Languages</b>, then translate with the free <b>Translate &amp; Adapt</b> app.</li>
+        <li><b>Theme texts</b>: change any button or label in <b>Themes &gt; ... &gt; Edit default theme content</b>.</li>
+      </ul>
+    </section>
+
+    <section id="metafields">
+      <h2>Metafields</h2>
+      <p>All are optional. Create them in <b>Settings &gt; Custom data</b> with the namespace and key shown.</p>
+      <table>
+        <thead><tr><th>Key</th><th>Owner, type</th><th>Where it shows</th></tr></thead>
+        <tbody>
+          <tr><td>custom.range</td><td>Product, single line text</td><td>The range above the product title</td></tr>
+          <tr><td>custom.lead</td><td>Product, single line text</td><td>Lead line under the price</td></tr>
+          <tr><td>custom.chips</td><td>Product, list of single line text</td><td>Short facts chips</td></tr>
+          <tr><td>custom.card_line</td><td>Product, single line text</td><td>Line under the name on product cards</td></tr>
+          <tr><td>custom.how_to_title</td><td>Product, single line text</td><td>Title of the How to use row</td></tr>
+          <tr><td>custom.how_to</td><td>Product, rich text</td><td>Body of the How to use row</td></tr>
+          <tr><td>custom.card_image</td><td>Blog post, file (image)</td><td>Portrait photo for article cards</td></tr>
+          <tr><td>custom.in_short</td><td>Blog post, multi-line text</td><td>In short points</td></tr>
+          <tr><td>custom.products</td><td>Blog post, list of products</td><td>Products in this article</td></tr>
+          <tr><td>custom.sources</td><td>Blog post, multi-line text</td><td>Sources at the end</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section id="images">
+      <h2>Images</h2>
+      <table>
+        <thead><tr><th>Place</th><th>Recommended size</th></tr></thead>
+        <tbody>
+          <tr><td>Hero slides</td><td>2880 by 1400 pixels, the person on the right half</td></tr>
+          <tr><td>Photo block frames</td><td>2880 by 1300 pixels, the subject on the right</td></tr>
+          <tr><td>New arrivals, Featured drop</td><td>2000 pixels wide or more</td></tr>
+          <tr><td>Categories, Standard, Reviews</td><td>1200 by 1500 pixels (portrait)</td></tr>
+          <tr><td>Products</td><td>1200 by 1200 pixels, plain light background</td></tr>
+          <tr><td>Article covers</td><td>2400 by 1000 pixels</td></tr>
+        </tbody>
+      </table>
+      <div class="note"><b>Keep people in frame on phones</b>Wide photos are cropped to fit tall phone cards. In <b>Content &gt; Files</b>, open the image and set its <b>focal point</b> on the face or product. The theme crops around it on every screen size.</div>
+    </section>
+
+    <section id="faq">
+      <h2>Questions</h2>
+      <h3>The Filters button does not show.</h3>
+      <p>Install Shopify Search &amp; Discovery and add at least one filter in the app.</p>
+      <h3>The phone menu is empty.</h3>
+      <p>Pick a menu in <b>Header &gt; Main links</b>, or create a menu with the handle <code>main-menu</code>.</p>
+      <h3>Prices do not switch currency.</h3>
+      <p>Local currencies need Shopify Payments and at least two markets in <b>Settings &gt; Markets</b>.</p>
+      <h3>How do I update the theme?</h3>
+      <p>When a new version is out, the Themes page shows an update. It installs as a new copy with your settings and content carried over; check it and publish when ready.</p>
+      <h3>Something else?</h3>
+      <p>Write to us on the <a href="support/">support page</a>. We answer within two business days.</p>
+    </section>
+
+    <section id="changelog">
+      <h2>Changelog</h2>
+      <h3><span class="ver">1.0.0</span>November 2026</h3>
+      <ul>
+        <li>First release.</li>
+        <li>Home sections: Hero, Manifesto, Categories, Product strip, Featured drop, Standard, New arrivals, Photo block, Reviews, Journal, Newsletter, Statement, Featured product, Custom Liquid.</li>
+        <li>Product page with blocks, color photos, subscriptions, gift card recipients, pickup availability, complementary products, video and 3D.</li>
+        <li>Filters and sorting on collections and search, predictive search, cart drawer and cart page.</li>
+        <li>Journal with card photos and article metafields, gift card page with QR code, country and language picker.</li>
+      </ul>
+    </section>
+  </main>
+</div>
+
+<footer class="foot">Chalk theme by Promak Design. <a href="support/">Support</a></footer>
+
+<script>
+  /* highlight the chapter in view in the side contents */
+  const links = [...document.querySelectorAll('.side a')];
+  const io = new IntersectionObserver((es) => es.forEach((e) => {
+    if (e.isIntersecting) links.forEach((a) => a.classList.toggle('on', a.hash === '#' + e.target.id));
+  }), { rootMargin: '-30% 0px -60% 0px' });
+  document.querySelectorAll('main section').forEach((s) => io.observe(s));
+</script>
+</body>
+</html>
