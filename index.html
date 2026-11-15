@@ -27,6 +27,8 @@
     <a href="#cart">Cart</a>
     <a href="#journal">Journal</a>
     <a href="#pages">About, contact, FAQ</a>
+    <a href="#popup">Newsletter popup</a>
+    <a href="#notfound">404 page</a>
     <a href="#giftcard">Gift cards</a>
     <a href="#markets">Languages and currencies</a>
     <a href="#metafields">Metafields</a>
@@ -73,7 +75,7 @@
     <section id="header">
       <h2>Header and menus</h2>
       <h3>Announcement</h3>
-      <p>A thin bar above the header with a <b>left text</b>, a <b>countdown</b> and a <b>right text</b>. Write the countdown end as <code>2026-12-31 23:59</code>. When the date passes, the countdown hides itself.</p>
+      <p>A black strip above the header. On the left a short line (hidden on phones), in the middle a <b>countdown</b> to a date in white number tiles (days, hours, minutes, seconds) with a label such as <b>Sale starts in</b>, and on the right a line such as <b>Free shipping over $60</b> with a delivery icon. Write the date as <code>2026-12-31 23:59</code>; when it passes, the countdown hides itself. On phones the countdown and the right line take turns in one line every few seconds.</p>
       <h3>Header</h3>
       <ul>
         <li><b>Logo</b>: an image. Without one, the store name is set in the theme font with an accent dot.</li>
@@ -180,9 +182,26 @@
       <p>To use them, create a page and pick the template <code>page.about</code>, <code>page.contact</code> or <code>page.faq</code> in the page editor.</p>
     </section>
 
+    <section id="popup">
+      <h2>Newsletter popup</h2>
+      <p>A card with a photo, your offer and an email field. It is <b>off by default</b>; find <b>Newsletter popup</b> in the footer group of the theme editor and tick <b>Show the popup</b>. While the section is selected in the editor the popup opens so you can style it, even when it is off.</p>
+      <ul>
+        <li><b>Open after</b>: seconds before it appears (0 to 30).</li>
+        <li><b>Show again after</b>: days before a visitor who closed it sees it again. People who signed up never see it again.</li>
+        <li><b>Photo, label, heading, text, button, decline link, thank-you message</b>: all editable.</li>
+        <li>Visitors close it with the X, the decline link, a click outside or the Esc key. On phones it rises from the bottom.</li>
+        <li>Sign-ups go to <b>Customers</b> with the <code>newsletter</code> tag and email marketing consent, like the Newsletter section. Send the discount code with a Shopify Email automation.</li>
+      </ul>
+    </section>
+
+    <section id="notfound">
+      <h2>404 page</h2>
+      <p>The page shown for a broken link fits one screen: a photo with <b>404</b> and your heading in the middle, a search field and a button, and one row of four products below. In the theme editor, open <b>404 page</b> to change the photo, heading, text, button and the collection the products come from. Untick <b>Show products</b> to hide the row. Without a collection, the Best sellers collection is used.</p>
+    </section>
+
     <section id="giftcard">
       <h2>Gift cards</h2>
-      <p>Create a gift card product in <b>Products &gt; Gift cards</b>. On its product page, shoppers can send the card to someone else with a name, email, message and send date. The gift card page they receive shows the balance, the code with a copy button, a QR code for in-store use, Apple Wallet and a print button.</p>
+      <p>Create a gift card product in <b>Products &gt; Gift cards</b>. On its product page, shoppers can send the card to someone else with a name, email, message and send date. The gift card page they receive shows the card in the brand black with the balance and the last four characters, the message from the sender, the code with a copy button, a QR code for in-store use, Apple Wallet and a print button. An expired card says so and hides the code.</p>
     </section>
 
     <section id="markets">
@@ -253,6 +272,7 @@
         <li>Product page with blocks, color photos, subscriptions, gift card recipients, pickup availability, complementary products, video and 3D.</li>
         <li>Filters and sorting on collections and search, predictive search, cart drawer and cart page.</li>
         <li>Journal with card photos and article metafields, gift card page with QR code, country and language picker.</li>
+        <li>Announcement countdown in number tiles, optional newsletter popup, one-screen 404 page with products.</li>
       </ul>
     </section>
   </main>
