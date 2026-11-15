@@ -1,7 +1,8 @@
 /* CHALK docs: white page, black type, one blue accent, the theme's Geist font */
 :root{--ink:#0E0E0E;--mute:rgba(14,14,14,.64);--line:rgba(14,14,14,.12);--soft:#F2F2F0;--accent:#050FFF;--g:24px}
 *{box-sizing:border-box}
-html{scroll-behavior:smooth;scroll-padding-top:88px}
+html{scroll-behavior:smooth;scroll-padding-top:88px;overflow-x:clip}
+body{overflow-x:clip}
 body{margin:0;background:#fff;color:var(--ink);font:16px/1.6 'Geist',system-ui,sans-serif;-webkit-font-smoothing:antialiased}
 a{color:inherit}
 .top{position:sticky;top:0;z-index:10;display:flex;align-items:center;justify-content:space-between;gap:16px;padding:14px var(--g);background:rgba(255,255,255,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
@@ -12,7 +13,7 @@ a{color:inherit}
 .top nav a:hover{background:var(--soft)}
 .top nav a.dark{background:var(--ink);color:#fff}
 .wrap{display:grid;grid-template-columns:240px minmax(0,760px);gap:64px;max-width:1140px;margin:0 auto;padding:48px var(--g) 120px}
-.side{position:sticky;top:88px;align-self:start;max-height:calc(100vh - 110px);overflow:auto}
+.side{position:sticky;top:88px;align-self:start;max-height:calc(100vh - 110px);overflow-y:auto;overflow-x:hidden;padding:0 10px;margin:0 -10px;scrollbar-width:thin}
 .side b{display:block;font:600 12px/1 'Geist',sans-serif;letter-spacing:.02em;text-transform:uppercase;color:var(--mute);margin:0 0 12px}
 .side a{display:block;text-decoration:none;padding:6px 10px;margin:0 -10px;border-radius:8px;font-size:15px}
 .side a:hover,.side a.on{background:var(--soft)}
@@ -53,7 +54,7 @@ td:first-child{font-weight:600;white-space:nowrap}
 .facts span{font-size:14px;color:var(--mute)}
 @media (max-width:900px){
   .wrap{grid-template-columns:1fr;gap:24px;padding-top:28px}
-  .side{position:static;max-height:none;display:flex;flex-wrap:wrap;gap:6px}.side b{width:100%}
+  .side{position:static;max-height:none;display:flex;flex-wrap:wrap;gap:6px;padding:0;margin:0;overflow:visible}.side b{width:100%}
   .side a{margin:0;background:var(--soft);font-size:14px}
   td:first-child{white-space:normal}
 }
