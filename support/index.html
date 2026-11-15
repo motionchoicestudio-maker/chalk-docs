@@ -7,7 +7,7 @@
 <meta name="description" content="Get help with the Chalk Shopify theme: what support covers, response times and the contact form.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../assets/docs.css?v=2">
+<link rel="stylesheet" href="../assets/docs.css?v=3">
 </head>
 <body>
 <header class="top">
@@ -30,12 +30,12 @@
       <div class="facts">
         <div><b>2 days</b><span>Reply time, business days</span></div>
         <div><b>English</b><span>Support language</span></div>
-        <div><b>Free</b><span>For every Chalk license</span></div>
+        <div><b>Included</b><span>With every Chalk purchase</span></div>
       </div>
       <h2>Before you write</h2>
       <ol class="steps">
-        <li>Check the <a href="../">documentation</a> and its <a href="../#faq">questions</a>.</li>
-        <li>Make sure you are on the latest version (see the <a href="../#changelog">changelog</a>). The version is in <b>Theme settings &gt; Theme information</b>.</li>
+        <li>Check the <a href="../">documentation</a> and its <a href="../#faq">FAQ</a>.</li>
+        <li>Make sure you are on the latest version (see the <a href="../#changelog">changelog</a>). The version shows under the theme name in <b>Online Store &gt; Themes</b>.</li>
         <li>Turn off apps one by one if the problem started after installing an app.</li>
         <li>Have your store address, a link to the page and a screenshot ready.</li>
       </ol>
@@ -52,18 +52,24 @@
           <tr><td>Updates to new theme versions</td><td>Shopify admin, payments and domain questions</td></tr>
         </tbody>
       </table>
+      <p>Before you or a developer edit the theme code, duplicate the theme and work on the copy. For custom design or code work we recommend hiring a <a href="https://www.shopify.com/partners/directory">Shopify Partner</a>.</p>
     </section>
 
     <section id="form">
       <h2>Contact form</h2>
       <div class="card">
-        <form class="form" id="sf">
+        <p class="sent" id="sent" hidden>Thanks, your message is on its way. We reply within two business days.</p>
+        <form class="form" id="sf" action="https://formsubmit.co/promakdesign@gmail.com" method="POST" enctype="multipart/form-data">
+          <input type="hidden" name="_subject" value="Chalk support request">
+          <input type="hidden" name="_template" value="table">
+          <input type="hidden" name="_next" value="https://motionchoicestudio-maker.github.io/chalk-docs/support/?sent=1#form">
+          <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
           <div class="row2">
             <label>Your name<input name="name" autocomplete="name" required></label>
             <label>Your email<input name="email" type="email" autocomplete="email" required></label>
           </div>
           <div class="row2">
-            <label>Store address<input name="store" placeholder="your-store.myshopify.com" required></label>
+            <label>Store URL <small>for example https://your-store.myshopify.com</small><input name="store_url" type="url" placeholder="https://your-store.myshopify.com" required></label>
             <label>Topic<select name="topic">
               <option>Setting up the theme</option>
               <option>Something does not work</option>
@@ -72,8 +78,9 @@
             </select></label>
           </div>
           <label>Message<textarea name="message" placeholder="What happened, on which page, and what you expected instead." required></textarea></label>
+          <label>Screenshot or file <small>optional, image or PDF up to 5 MB</small><input name="attachment" type="file" accept="image/*,.pdf"></label>
           <div><button class="btn" type="submit">Send message <i aria-hidden="true">&rarr;</i></button></div>
-          <p class="mu" style="margin:0;font-size:14px;color:var(--mute)">The form opens your email app with the message filled in. You can also write to <a id="sm" href="#"></a> directly.</p>
+          <p class="mu" style="margin:0;font-size:14px;color:var(--mute)">You can also write to <a id="sm" href="#"></a> directly.</p>
         </form>
       </div>
     </section>
@@ -83,15 +90,13 @@
 <footer class="foot">Chalk theme by Promak Design. <a href="../">Documentation</a></footer>
 
 <script>
-  /* the support inbox, the only value to change */
+  /* the support inbox; the form above posts to the same address through FormSubmit */
   const SUPPORT_EMAIL = 'promakdesign@gmail.com';
   const sm = document.getElementById('sm'); sm.textContent = SUPPORT_EMAIL; sm.href = 'mailto:' + SUPPORT_EMAIL;
+  if (new URLSearchParams(location.search).has('sent')) { document.getElementById('sent').hidden = false; document.getElementById('sf').hidden = true; }
   document.getElementById('sf').addEventListener('submit', (e) => {
-    e.preventDefault();
-    const f = new FormData(e.target);
-    const subject = 'Chalk support: ' + f.get('topic');
-    const body = ['Name: ' + f.get('name'), 'Email: ' + f.get('email'), 'Store: ' + f.get('store'), '', f.get('message')].join('\n');
-    location.href = 'mailto:' + SUPPORT_EMAIL + '?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
+    const f = e.target.querySelector('input[type=file]').files[0];
+    if (f && f.size > 5 * 1024 * 1024) { e.preventDefault(); alert('Please attach a file up to 5 MB.'); }
   });
 </script>
 </body>

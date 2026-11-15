@@ -65,3 +65,6 @@ td:first-child{font-weight:600;white-space:nowrap}
   table,thead,tbody,tr,th,td{display:block}thead{display:none}
   tr{border-bottom:1px solid var(--line);padding:10px 0}td{border:0;padding:2px 0}
 }
+.form label small{font-size:13px;color:var(--mute);opacity:.8}
+.form input[type=file]{height:auto;padding:12px 16px}
+.sent{margin:0;padding:18px 20px;border-radius:12px;background:#F2F2F0;font-size:16px}
